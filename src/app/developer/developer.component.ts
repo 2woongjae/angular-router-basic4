@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-developer',
@@ -10,8 +11,7 @@ export class DeveloperComponent implements OnInit {
   name;
 
   constructor(private route: ActivatedRoute) {
-    console.log(route.snapshot.paramMap.get('name'));
-    this.name = route.snapshot.paramMap.get('name');
+    this.name = route.params.map(p => p.name);
   }
 
   ngOnInit() {
