@@ -3,10 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-develper',
-  templateUrl: './develper.component.html',
-  styleUrls: ['./develper.component.css']
+  templateUrl: './developer.component.html',
+  styleUrls: ['./developer.component.css']
 })
-export class DevelperComponent implements OnInit {
+export class DeveloperComponent implements OnInit {
   name;
 
   constructor(private route: ActivatedRoute) {
